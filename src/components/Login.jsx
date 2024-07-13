@@ -71,7 +71,7 @@ export default function Login() {
               className="m-2 px-2 py-1 border bg-slate-100 rounded-md"
             />
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               onChange={(e) => handlePassword(e)}
               className="m-2 px-2 py-1 border bg-slate-100 rounded-md"

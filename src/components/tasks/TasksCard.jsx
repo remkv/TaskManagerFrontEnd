@@ -31,7 +31,8 @@ const [title, setTitle] = useState(data.title);
                                  })
                                  console.log(response.status)
     if(response.status == '200'){
-    alert('Task Updated.')}
+        alert('Task Updated.')
+    }
      window.location.reload();
   };
 
@@ -56,14 +57,15 @@ const [title, setTitle] = useState(data.title);
   return (
     <section>
 
-      <div className="flex flex-col justify-center items-center border size-[250px] my-4 shadow-md cursor-pointer">
+      <div className="flex flex-col justify-center items-left border size-[250px] my-4 shadow-md cursor-pointer">
+        <div className="ml-5">
         <p className="mt-1 px-1"><span className="font-medium">Task Title : </span>
         <input type="text"
             value = {title}
              className="border-2 rounded-md px-2 h-5 md:h-8 w-[8.5rem]"
              onChange={(e) => setTitle(e.target.value)}
            /></p>
-        <p className="mx-1 px-1"><span className="font-medium">Completed Status : </span>
+        <p className="mt-1 px-1"><span className="font-medium">Completed Status : </span>
         <input type="checkbox" checked={completed} onChange={(e) => setCompleted(!completed)} /></p>
         <div className="flex my-4">
         <button
@@ -76,6 +78,7 @@ const [title, setTitle] = useState(data.title);
         onClick={() => handleDelete()}>
         Delete
         </button>
+                    </div>
                     </div>
       </div>
     </section>
